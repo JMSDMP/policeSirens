@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siren Controls</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="lights">
+        <div class="light leftBlue blue"></div>
+        <div class="light leftBlue blue"></div>
+        <div class="light leftWhite white"></div>
+        <div class="light centreBlue blue"></div>
+        <div class="light rightWhite white"></div>
+        <div class="light rightBlue blue"></div>
+        <div class="light rightBlue blue"></div>
+    </div>
+    <div class="grid">
+        <button class="blue" id="ninenine" onclick="toggle999()">999</button>
+        <button class="red" id="lights-on" onclick="lightsOn()">LIGHTS</button>
+        <button class="red" id="lights-off" onclick="lightsOff()">OFF</button>
+        <button class="yellow" id="siren-off" onclick="stopSiren()">STOP</button>
+        <button class="yellow" id="wail-siren" onclick="wailSiren()">WAIL</button>
+        <button class="yellow" id="yelp-siren" onclick="yelpSiren()">YELP</button>
+        <button class="yellow" id="hyperyelp-siren" onclick="hyperyelpSiren()">HYPER</button>
+        <button class="" id="hilo" onclick=""></button>
+        <button class="green" id="off" onclick="allOff()">OFF</button>
+    </div>
+    <button class="red" id="horn" ondblclick="stopSiren(); sirenAudio.horn2.play()" onclick="horn()" onmousedown="hornSFX()">SIREN</button>
+    <section id="audio-elements">
+        <audio preload="auto" loop src="audio/wail.wav" id="wail-audio"></audio>
+        <audio preload="auto" loop src="audio/yelp.wav" id="yelp-audio"></audio>
+        <audio preload="auto" loop src="audio/hyperyelp.wav" id="hyperyelp-audio"></audio>
+        <audio preload="auto" src="audio/horn.wav" id="horn-audio"></audio>
+        <audio preload="auto" src="audio/horn.wav" id="horn2-audio"></audio>
+    </section>
+</body>
+</html>
